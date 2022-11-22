@@ -40,24 +40,24 @@ class EmployeeAddController extends Controller
     }   
     public function updatedData(Request $request)
     {
+        $code = $request['employee-code'];
+        $name = $request['employee-name'];
+        $cnic = $request['cnic-no'];
+        $father = $request['employee-father-name'];
+        $address = $request['Address'];
+        $phone = $request['phone'];
 
-        $intEmpCode =  $request['employee-code'];
-        $strEmpName = $request['employee-name'];
-        $strCNICNo =  $request['cnic-no'];
-        $strEmpFatherName = $request['employee-father-name'];
-        $strPhone = $request['phone'];
-        $strAddress =  $request['Address'];
+        $employee = tblEmployee::find($code);
 
-        $employee = tblEmployee::find($intEmpCode);
-        $employee->$intEmpCode = $intEmpCode;
-        $employee->$strEmpName = $strEmpName;
-        $employee->$strCNICNo = $strCNICNo;
-        $employee->$strEmpFatherName = $strEmpFatherName;
-        $employee->$strPhone = $strPhone;
-        $employee->$strAddress = $strAddress;
+        
+        $employee->strEmpName = $name;
+        $employee->strCNICNo = $cnic;
+        $employee->strEmpFatherName = $father;
+        $employee->strPhone = $address;
+        $employee->strAddress = $phone;
 
         $employee->save();
 
-        return redirect('updateemployee/');
-    } 
+        return redirect('Employees/');
+    }
 }

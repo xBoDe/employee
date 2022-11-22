@@ -2,14 +2,14 @@
 @section('content')
         <div class="mt-10 md:mt-0">
                 <div class="mt-5 md:col-span-4 md:mt-0">
-                    <form action="/update" method="POST">
+                    <form action="/updatedData" method="POST">
                         @csrf
                         <div class="overflow-hidden shadow md:rounded-md">
                             <div class="bg-white px-4 py-5 md:p-6">
                                 <div class="grid grid-cols-6 gap-6">
                                     <div class="col-span-6 md:col-span-3">
-                                        <label for="employee-code" class="block text-md font-medium text-gray-700">Employee Code</label>
-                                        <input value="{{ $employee['intEmpCode'] }}" type="text" name="employee-code" id="first-name" autocomplete="given-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-md focus:border-indigo-500 focus:ring-indigo-500 md:text-md">
+                                        <label for="employee-code" class="block text-md font-medium text-gray-400">Employee Code</label>
+                                        <input disabled value="{{ $employee['intEmpCode'] }}" type="text" name="employee-code" id="first-name" autocomplete="given-name" class="mt-1 block w-full text-gray-400 rounded-md border-gray-300 shadow-md focus:border-indigo-500 focus:ring-indigo-500 md:text-md">
                                     </div>
 
                                     <div class="col-span-6 md:col-span-3">

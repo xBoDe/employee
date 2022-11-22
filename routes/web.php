@@ -22,6 +22,6 @@ Route::post('EmployeesAdd/', [\App\Http\Controllers\EmployeeAddController::class
 
 Route::get('DeleteEmployees/{id}', [\App\Http\Controllers\EmployeeAddController::class,'destroy']);
 Route::get('updateEmployees/{id}', [\App\Http\Controllers\EmployeeAddController::class,'update']);
-Route::post('update/', [\App\Http\Controllers\EmployeeAddController::class,'updatedData']);
+Route::post('updatedData/', [\App\Http\Controllers\EmployeeAddController::class,'updatedData']);
 
 
